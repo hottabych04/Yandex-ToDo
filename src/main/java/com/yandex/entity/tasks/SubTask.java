@@ -1,7 +1,5 @@
 package com.yandex.entity.tasks;
 
-import com.yandex.enums.TasksStatus;
-
 public class SubTask extends SimpleTask {
 
     private Long epicId;

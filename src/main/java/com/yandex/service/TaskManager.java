@@ -3,22 +3,15 @@ package com.yandex.service;
 import com.yandex.entity.tasks.Epic;
 import com.yandex.entity.tasks.SimpleTask;
 import com.yandex.entity.tasks.SubTask;
-import com.yandex.enums.TasksStatus;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class TaskManager {
-    private static Long uniqueId = 1L;
-    private HashMap<Long, SimpleTask> simpleTasks;
-    private HashMap<Long, SubTask> subTasks;
-    private HashMap<Long, Epic> epics;
-
-    public TaskManager() {
-        simpleTasks = new HashMap<>();
-        subTasks = new HashMap<>();
-        epics = new HashMap<>();
-    }
+    private Long uniqueId = 1L;
+    private final HashMap<Long, SimpleTask> simpleTasks = new HashMap<>();
+    private final HashMap<Long, SubTask> subTasks = new HashMap<>();
+    private final HashMap<Long, Epic> epics = new HashMap<>();
 
     /*
     Получение списков задач всех типов
@@ -45,22 +38,16 @@ public class TaskManager {
     }
 
     public void deleteAllSubTask(){
-        subTasks.values()
-                        .forEach(it -> {
-                            epics.get(it.getEpicId()).deleteSubTaskById(it.getId());
-                        });
+        epics.values()
+                .forEach(it ->{
+                    it.deleteAllSubTasks();
+                    it.statusControl();
+                });
         subTasks.clear();
     }
 
     public void deleteAllEpics(){
-        epics.values()
-                .forEach( it -> {
-                    Set<Long> delSubTasksIds = it.deleteEpic();
-                    delSubTasksIds
-                            .forEach( id -> {
-                                subTasks.remove(id);
-                            });
-                });
+        subTasks.clear();
         epics.clear();
     }
 
@@ -93,7 +80,9 @@ public class TaskManager {
     public SubTask addNewSubTask(SubTask newTask){
         newTask.setId(uniqueId++);
         subTasks.putIfAbsent(newTask.getId(), newTask);
-        epics.get(newTask.getEpicId()).addSubTask(newTask);
+        Epic epic = epics.get(newTask.getEpicId());
+        epic.addSubTask(newTask);
+        epic.statusControl();
         return subTasks.get(newTask.getId());
     }
 
@@ -113,18 +102,21 @@ public class TaskManager {
     }
 
     public SubTask subTaskUpdate(SubTask task){
-        epics.get(task.getEpicId()).updateSubTask(task);
+        Epic epic = epics.get(task.getEpicId());
+        epic.updateSubTask(task);
         subTasks.put(task.getId(), task);
+        epic.statusControl();
         return subTasks.get(task.getId());
     }
 
     public Epic epicUpdate(Epic epic){
-        Set<Long> delSubTasksIds = epics.get(epic.getId()).deleteEpic();
-        delSubTasksIds
-                .forEach(it -> {
-                    subTasks.remove(it);
-                });
+        subTasks.values().stream()
+                .filter(it -> Objects.equals(it.getEpicId(), epic.getId()))
+                .map(SimpleTask::getId)
+                .forEach(subTasks::remove);
+        epics.get(epic.getId()).deleteEpic();
         epics.put(epic.getId(), epic);
+        epics.get(epic.getId()).statusControl();
         return epics.get(epic.getId());
     }
 
@@ -137,16 +129,17 @@ public class TaskManager {
     }
 
     public void deleteSubTaskById(Long id){
-        epics.get(subTasks.get(id).getEpicId()).deleteSubTaskById(id);
+        Epic epic = epics.get(subTasks.get(id).getEpicId());
+        epic.deleteSubTaskById(id);
+        epic.statusControl();
         subTasks.remove(id);
     }
 
     public void deleteEpicById(Long id){
-        Set<Long> delSubTasksIds = epics.get(id).deleteEpic();
-        delSubTasksIds
-                .forEach(it -> {
-                    subTasks.remove(it);
-                });
+        subTasks.values().stream()
+                .filter(it -> Objects.equals(it.getEpicId(), id))
+                .map(SimpleTask::getId)
+                .forEach(subTasks::remove);
         epics.remove(id);
     }
 

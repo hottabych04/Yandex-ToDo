@@ -21,10 +21,6 @@ public class SimpleTask {
         return name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public Long getId() {
         return id;
     }

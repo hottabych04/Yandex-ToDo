@@ -40,8 +40,12 @@ public class Main {
         manager.subTaskUpdate(thirdSubTask);
         System.out.println(secondEpic);
 
+        thirdSubTask.setStatus(TasksStatus.DONE);
+        manager.deleteSubTaskById(thirdSubTask.getId());
+        System.out.println(secondEpic);
+
         manager.deleteAllEpics();
-        manager.subTaskUpdate(thirdSubTask);
+//        manager.subTaskUpdate(thirdSubTask);
 
     }
 }
