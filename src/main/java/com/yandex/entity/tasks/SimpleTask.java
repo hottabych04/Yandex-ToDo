@@ -17,8 +17,19 @@ public class SimpleTask {
         this.status = TasksStatus.NEW;
     }
 
+    public SimpleTask(SimpleTask simpleTask){
+        this.id = simpleTask.getId();
+        this.name = simpleTask.getName();
+        this.description = simpleTask.getDescription();
+        this.status = simpleTask.getStatus();
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public Long getId() {
@@ -31,6 +42,14 @@ public class SimpleTask {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setStatus(TasksStatus status) {

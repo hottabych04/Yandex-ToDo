@@ -2,21 +2,30 @@ package com.yandex.entity.tasks;
 
 public class SubTask extends SimpleTask {
 
-    private Long epicId;
+    private Epic epic;
 
-    public SubTask(String name, String description, Long epicId) {
+    public SubTask(String name, String description, Epic epic) {
         super(name, description);
-        this.epicId = epicId;
+        this.epic = epic;
+    }
+
+    public SubTask(SubTask subTask) {
+        super(subTask.getName(), subTask.getDescription());
+        this.epic = subTask.getEpic();
     }
 
     public Long getEpicId() {
-        return epicId;
+        return epic.getId();
+    }
+
+    private Epic getEpic(){
+        return epic;
     }
 
     @Override
     public String toString() {
         return "SubTask{" +
-                "epicId=" + epicId +
+                "epicId=" + epic.getId() +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +

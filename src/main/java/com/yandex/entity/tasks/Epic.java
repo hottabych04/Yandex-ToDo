@@ -7,11 +7,21 @@ import java.util.Set;
 
 public class Epic extends SimpleTask {
 
-    private final HashMap<Long, SubTask> tasks = new HashMap<>();
+    private HashMap<Long, SubTask> tasks = new HashMap<>();
 
 
     public Epic(String name, String description) {
         super(name, description);
+    }
+
+    public Epic(Epic epic){
+        super(epic.getName(), epic.getDescription());
+        this.id = epic.getId();
+        this.tasks = epic.getTasks();
+    }
+
+    private HashMap<Long, SubTask> getTasks() {
+        return tasks;
     }
 
     public void deleteSubTaskById(Long subTaskId){

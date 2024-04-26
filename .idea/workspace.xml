@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbc26abc-9af4-4c07-86c1-06c283951ec3" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/HistoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryHistoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/TaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/util/Managers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/entity/tasks/EpicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/entity/tasks/SimpleTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/entity/tasks/SubTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/service/managers/HistoryManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/service/managers/InMemoryTaskManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yandex/service/util/ManagersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/Epic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SimpleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SimpleTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SubTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SubTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryTaskManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +50,18 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="yandex-todo" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="yandex-todo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="yandex-todo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -76,7 +98,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.HistoryManagerTest.correctAddTaskToHistoryManager.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HistoryManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HistoryManagerTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.addTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.immutabilityEpicsAddedToManager.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.immutabilitySimpleTasksAddedToManager.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.immutabilitySubTasksAddedToManager.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InMemoryTaskManagerTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleTaskTest.simpleTasksEqualsByIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleTaskTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SubTaskTest.simpleTasksEqualsById.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SubTaskTest.subTaskLikeEpic.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.yandex-todo [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.yandex-todo [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.yandex-todo [test].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -86,10 +123,24 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.yandex.service" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yandex.Main" />
       <module name="yandex-todo.main" />
@@ -103,9 +154,105 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InMemoryTaskManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InMemoryTaskManagerTest.addTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest.addTasks&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="yandex-todo [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="yandex-todo [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.yandex-todo [test]" />
+        <item itemvalue="Gradle.InMemoryTaskManagerTest" />
+        <item itemvalue="Gradle.yandex-todo [build]" />
+        <item itemvalue="Gradle.InMemoryTaskManagerTest.addTasks" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +274,11 @@
       <updated>1713349660561</updated>
       <workItem from="1713349661604" duration="20295000" />
       <workItem from="1713372072911" duration="6167000" />
+      <workItem from="1713381329209" duration="460000" />
+      <workItem from="1713382099813" duration="400000" />
+      <workItem from="1713546608800" duration="89000" />
+      <workItem from="1714139461858" duration="14410000" />
+      <workItem from="1714158015414" duration="7413000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -164,5 +316,16 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryTaskManager.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
