@@ -18,10 +18,10 @@ public class SimpleTask {
     }
 
     public SimpleTask(SimpleTask simpleTask){
-        this.id = simpleTask.getId();
-        this.name = simpleTask.getName();
-        this.description = simpleTask.getDescription();
-        this.status = simpleTask.getStatus();
+        this.id = simpleTask.id;
+        this.name = simpleTask.name;
+        this.description = simpleTask.description;
+        this.status = simpleTask.status;
     }
 
     public String getName() {

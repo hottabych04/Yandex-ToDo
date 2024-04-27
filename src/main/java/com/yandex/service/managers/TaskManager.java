@@ -41,11 +41,11 @@ public interface TaskManager {
         Создание новых задач
     */
 
-     boolean addNewSimpleTask(SimpleTask newTask);
+    Long addNewSimpleTask(SimpleTask newTask);
 
-     boolean addNewSubTask(SubTask newTask);
+    Long addNewSubTask(SubTask newTask);
 
-     boolean addNewEpic(Epic newEpic);
+    Long addNewEpic(Epic newEpic);
 
     /*
         Обновление задач

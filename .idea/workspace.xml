@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbc26abc-9af4-4c07-86c1-06c283951ec3" name="Changes" comment="Added display names for tests and fixed them">
+    <list default="true" id="bbc26abc-9af4-4c07-86c1-06c283951ec3" name="Changes" comment="Fixed InMemoryTaskManagerTest and replace comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/Epic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SimpleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SimpleTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SubTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/entity/tasks/SubTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/HistoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryHistoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/InMemoryTaskManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/managers/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yandex/service/util/Managers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yandex/service/util/Managers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/yandex/service/managers/InMemoryTaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yandex/service/managers/InMemoryTaskManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,42 +86,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.CorrectlyAddTasksToHistoryManager.tasksAddedToHistoryManagerImmutable.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HistoryManagerTest.correctAddTaskToHistoryManager.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HistoryManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HistoryManagerTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.addTasks.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.immutabilityEpicsAddedToManager.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.immutabilitySimpleTasksAddedToManager.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.immutabilitySubTasksAddedToManager.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InMemoryTaskManagerTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ManagersTest.managersDontReturnNull.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleTaskTest.simpleTasksEqualsByIdTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleTaskTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SubTaskTest.simpleTasksEqualsById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SubTaskTest.subTaskLikeEpic.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.yandex-todo [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.yandex-todo [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.yandex-todo [test].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.CorrectlyAddTasksToHistoryManager.tasksAddedToHistoryManagerImmutable.executor": "Run",
+    "Gradle.HistoryManagerTest.correctAddTaskToHistoryManager.executor": "Run",
+    "Gradle.HistoryManagerTest.executor": "Run",
+    "Gradle.HistoryManagerTest.test.executor": "Run",
+    "Gradle.ImmutabilityTasksInManager.executor": "Run",
+    "Gradle.ImmutabilityTasksInManager.immutabilitySimpleTasksAddedToManager.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.addNewTasksWithIdToManager.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.addTasks.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.immutabilityEpicsAddedToManager.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.immutabilitySimpleTasksAddedToManager.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.immutabilitySubTasksAddedToManager.executor": "Run",
+    "Gradle.InMemoryTaskManagerTest.test.executor": "Run",
+    "Gradle.ManagersTest.managersDontReturnNull.executor": "Run",
+    "Gradle.SimpleTaskTest.simpleTasksEqualsByIdTest.executor": "Run",
+    "Gradle.SimpleTaskTest.test.executor": "Run",
+    "Gradle.SubTaskTest.simpleTasksEqualsById.executor": "Run",
+    "Gradle.SubTaskTest.subTaskLikeEpic.executor": "Run",
+    "Gradle.yandex-todo [:Main.main()].executor": "Run",
+    "Gradle.yandex-todo [build].executor": "Run",
+    "Gradle.yandex-todo [test].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.yandex.service" />
@@ -135,20 +136,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.yandex-todo [test]">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yandex.Main" />
-      <module name="yandex-todo.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yandex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CorrectlyAddTasksToHistoryManager.tasksAddedToHistoryManagerImmutable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ImmutabilityTasksInManager" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,7 +149,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.yandex.service.managers.HistoryManagerTest$CorrectlyAddTasksToHistoryManager.tasksAddedToHistoryManagerImmutable&quot;" />
+            <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest$ImmutabilityTasksInManager&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ImmutabilityTasksInManager.immutabilitySimpleTasksAddedToManager" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest$ImmutabilityTasksInManager.immutabilitySimpleTasksAddedToManager&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InMemoryTaskManagerTest.addNewTasksWithIdToManager" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest.addNewTasksWithIdToManager&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,30 +222,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.yandex.service.managers.InMemoryTaskManagerTest.addTasks&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ManagersTest.managersDontReturnNull" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.yandex.service.util.ManagersTest.managersDontReturnNull&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,10 +257,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.yandex-todo [test]" />
+        <item itemvalue="Gradle.InMemoryTaskManagerTest.addNewTasksWithIdToManager" />
+        <item itemvalue="Gradle.ImmutabilityTasksInManager" />
+        <item itemvalue="Gradle.ImmutabilityTasksInManager.immutabilitySimpleTasksAddedToManager" />
         <item itemvalue="Gradle.InMemoryTaskManagerTest.addTasks" />
-        <item itemvalue="Gradle.CorrectlyAddTasksToHistoryManager.tasksAddedToHistoryManagerImmutable" />
-        <item itemvalue="Gradle.ManagersTest.managersDontReturnNull" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +295,8 @@
       <workItem from="1714213909089" duration="572000" />
       <workItem from="1714219160166" duration="1718000" />
       <workItem from="1714221357876" duration="348000" />
-      <workItem from="1714221837980" duration="471000" />
+      <workItem from="1714221837980" duration="495000" />
+      <workItem from="1714233657284" duration="2080000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -309,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714212593152</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed InMemoryTaskManagerTest and replace comments">
+      <option name="closed" value="true" />
+      <created>1714222329142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714222329142</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +359,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added tests and refactor the code" />
     <MESSAGE value="Added display names for tests and fixed them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added display names for tests and fixed them" />
+    <MESSAGE value="Fixed InMemoryTaskManagerTest and replace comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed InMemoryTaskManagerTest and replace comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

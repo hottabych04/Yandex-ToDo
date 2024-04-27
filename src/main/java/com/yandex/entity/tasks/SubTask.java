@@ -10,16 +10,12 @@ public class SubTask extends SimpleTask {
     }
 
     public SubTask(SubTask subTask) {
-        super(subTask.getName(), subTask.getDescription());
-        this.epic = subTask.getEpic();
+        super(subTask.name, subTask.description);
+        this.epic = subTask.epic;
     }
 
     public Long getEpicId() {
         return epic.getId();
-    }
-
-    private Epic getEpic(){
-        return epic;
     }
 
     @Override

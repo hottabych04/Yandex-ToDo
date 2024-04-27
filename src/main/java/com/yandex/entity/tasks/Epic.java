@@ -15,9 +15,9 @@ public class Epic extends SimpleTask {
     }
 
     public Epic(Epic epic){
-        super(epic.getName(), epic.getDescription());
-        this.id = epic.getId();
-        this.tasks = epic.getTasks();
+        super(epic.name, epic.description);
+        this.id = epic.id;
+        this.tasks = epic.tasks;
     }
 
     private HashMap<Long, SubTask> getTasks() {
@@ -41,7 +41,6 @@ public class Epic extends SimpleTask {
     }
 
     public void deleteAllSubTasks(){
-        Set<Long> subTasksIds = tasks.keySet();
         tasks.clear();
     }
 

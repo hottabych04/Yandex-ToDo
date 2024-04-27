@@ -86,30 +86,30 @@ public class InMemoryTaskManager implements TaskManager{
     */
 
     @Override
-    public boolean addNewSimpleTask(SimpleTask newTask){
+    public Long addNewSimpleTask(SimpleTask newTask){
         SimpleTask task = new SimpleTask(newTask);
         task.setId(uniqueId++);
         simpleTasks.putIfAbsent(task.getId(), task);
-        return true;
+        return task.getId();
     }
 
     @Override
-    public boolean addNewSubTask(SubTask newTask){
+    public Long addNewSubTask(SubTask newTask){
         SubTask task = new SubTask(newTask);
         task.setId(uniqueId++);
         Epic epic = epics.get(task.getEpicId());
         epic.addSubTask(task);
         epic.statusControl();
         subTasks.putIfAbsent(task.getId(), task);
-        return true;
+        return task.getId();
     }
 
     @Override
-    public boolean addNewEpic(Epic newEpic){
+    public Long addNewEpic(Epic newEpic){
         Epic epic = new Epic(newEpic);
         epic.setId(uniqueId++);
         epics.putIfAbsent(epic.getId(), epic);
-        return true;
+        return epic.getId();
     }
 
     /*
