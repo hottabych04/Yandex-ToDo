@@ -6,7 +6,15 @@ import java.util.List;
 
 public interface HistoryManager {
 
+    /*
+        Метод для заполнения истории просмотров
+    */
+
     void add(SimpleTask task);
+
+    /*
+        Получение истории просмотров задач
+    */
 
     List<SimpleTask> getHistory();
 }

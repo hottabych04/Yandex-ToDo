@@ -29,9 +29,9 @@ public class InMemoryTaskManagerTest {
                 () -> assertThat(manager.addNewSimpleTask(new SimpleTask("name", "description"))).isTrue(),
                 () -> assertThat(manager.addNewEpic(new Epic("name", "description"))).isTrue(),
                 () -> assertThat(manager.addNewSubTask(new SubTask("name", "description", manager.getEpicById(2L)))).isTrue(),
-                () -> assertThat(manager.getAllSimpleTasks()).isNotNull(),
-                () -> assertThat(manager.getAllSubTasks()).isNotNull(),
-                () -> assertThat(manager.getAllEpics()).isNotNull()
+                () -> assertThat(manager.getAllSimpleTasks().isEmpty()).isFalse(),
+                () -> assertThat(manager.getAllSubTasks().isEmpty()).isFalse(),
+                () -> assertThat(manager.getAllEpics().isEmpty()).isFalse()
         );
     }
 

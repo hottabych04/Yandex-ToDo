@@ -24,25 +24,25 @@ public class Epic extends SimpleTask {
         return tasks;
     }
 
-    public void deleteSubTaskById(Long subTaskId){
-        tasks.remove(subTaskId);
-    }
-
-    public void deleteAllSubTasks(){
-        Set<Long> subTasksIds = tasks.keySet();
-        tasks.clear();
-    }
-
-    public void deleteEpic(){
-        deleteAllSubTasks();
-    }
-
     public void addSubTask(SubTask newTask){
         tasks.putIfAbsent(newTask.id, newTask);
     }
 
     public void updateSubTask(SubTask task) {
         tasks.put(task.id, task);
+    }
+
+    public void deleteSubTaskById(Long subTaskId){
+        tasks.remove(subTaskId);
+    }
+
+    public void deleteEpic(){
+        deleteAllSubTasks();
+    }
+
+    public void deleteAllSubTasks(){
+        Set<Long> subTasksIds = tasks.keySet();
+        tasks.clear();
     }
 
     public void statusControl(){

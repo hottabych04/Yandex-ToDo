@@ -2,7 +2,7 @@ package com.yandex.entity.tasks;
 
 public class SubTask extends SimpleTask {
 
-    private Epic epic;
+    private final Epic epic;
 
     public SubTask(String name, String description, Epic epic) {
         super(name, description);

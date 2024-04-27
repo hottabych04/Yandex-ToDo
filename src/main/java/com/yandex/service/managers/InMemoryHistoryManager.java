@@ -10,7 +10,7 @@ public class InMemoryHistoryManager implements HistoryManager{
     private final LinkedList<SimpleTask> history = new LinkedList<>();
 
     /*
-    Метод для заполнения истории просмотров
+        Метод для заполнения истории просмотров
     */
 
     @Override
@@ -21,7 +21,7 @@ public class InMemoryHistoryManager implements HistoryManager{
     }
 
     /*
-    Получение истории просмотров задач
+        Получение истории просмотров задач
     */
 
     @Override

@@ -16,7 +16,7 @@ public class InMemoryTaskManager implements TaskManager{
     private final HistoryManager history = Managers.getDefaultHistory();
 
     /*
-    Получение списков задач всех типов
+        Получение списков задач всех типов
     */
 
     @Override
@@ -35,7 +35,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Удаление списков задач всех типов
+        Удаление списков задач всех типов
     */
 
     @Override
@@ -60,7 +60,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Получение задачи по идентификатору
+        Получение задачи по идентификатору
     */
 
     @Override
@@ -82,7 +82,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Создание новых задач
+        Создание новых задач
     */
 
     @Override
@@ -113,7 +113,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Вспомогательный метод для присваивания Id
+        Вспомогательный метод для присваивания Id
     */
 
     private void setId(SimpleTask task){
@@ -122,7 +122,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Обновление задач
+        Обновление задач
     */
 
     @Override
@@ -153,7 +153,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Удаление задачи по идентификатору
+        Удаление задачи по идентификатору
     */
 
     @Override
@@ -179,7 +179,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Получение списка всех подзадач определенного эпика
+        Получение списка всех подзадач определенного эпика
     */
 
     @Override
@@ -190,7 +190,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     /*
-    Получение истории просмотров задач
+        Получение истории просмотров задач
     */
 
     @Override

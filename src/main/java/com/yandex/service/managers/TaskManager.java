@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface TaskManager {
     /*
-    Получение списков задач всех типов
+        Получение списков задач всех типов
     */
 
     List<SimpleTask> getAllSimpleTasks();
@@ -18,7 +18,7 @@ public interface TaskManager {
     List<Epic> getAllEpics();
 
     /*
-    Удаление списков задач всех типов
+        Удаление списков задач всех типов
     */
 
      void deleteAllSimpleTask();
@@ -28,7 +28,7 @@ public interface TaskManager {
      void deleteAllEpics();
 
     /*
-    Получение задачи по идентификатору
+        Получение задачи по идентификатору
     */
 
      SimpleTask getSimpleTaskById(Long id);
@@ -38,7 +38,7 @@ public interface TaskManager {
      Epic getEpicById(Long id);
 
     /*
-    Создание новых задач
+        Создание новых задач
     */
 
      boolean addNewSimpleTask(SimpleTask newTask);
@@ -48,7 +48,7 @@ public interface TaskManager {
      boolean addNewEpic(Epic newEpic);
 
     /*
-    Обновление задач
+        Обновление задач
     */
 
      boolean simpleTaskUpdate(SimpleTask task);
@@ -58,7 +58,7 @@ public interface TaskManager {
      boolean epicUpdate(Epic epic);
 
     /*
-    Удаление задачи по идентификатору
+        Удаление задачи по идентификатору
     */
 
      void deleteSimpleTaskById(Long id);
@@ -68,13 +68,13 @@ public interface TaskManager {
      void deleteEpicById(Long id);
 
     /*
-    Получение списка всех подзадач определенного эпика
+        Получение списка всех подзадач определенного эпика
     */
 
      List<SubTask> getAllSubTaskFromEpicByEpicId(Long id);
 
     /*
-    Получение истории просмотров задач
+        Получение истории просмотров задач
     */
 
     List<SimpleTask> getHistory();
