@@ -1,11 +1,14 @@
 package com.yandex.entity.tasks;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class EpicTest {
 
     @Test
+    @DisplayName("Epics equals by id")
     void simpleTasksEqualsById() {
         Epic task1 = new Epic("task1", "111111");
         Epic task2 = new Epic("task2", "222222");
